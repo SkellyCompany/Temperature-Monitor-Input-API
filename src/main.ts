@@ -7,7 +7,7 @@ async function bootstrap() {
 
   // CORS
   app.enableCors({
-    origin: 'http://localhost:3000',
+    origin: 'https://temperature-monitor-input-web.herokuapp.com',
     credentials: true
   });
 
