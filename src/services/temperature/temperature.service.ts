@@ -12,9 +12,9 @@ export class TemperatureService {
 		@InjectModel(TemperatureRecord.name) private temperatureRecordModel: Model<TemperatureRecordDocument>
 	) { }
 
-	async insertRecord(temperatureRecordDto: TemperatureRecordDTO): Promise<TemperatureRecord> {
+	insertRecord(temperatureRecordDto: TemperatureRecordDTO): Promise<TemperatureRecord> {
 		const createdTemperatureRecord = new this.temperatureRecordModel(temperatureRecordDto);
-		this.client.emit('temperature/newInsert', JSON.stringify(temperatureRecordDto));
+		this.client.emit('temperature/newInsert', JSON.stringify(createdTemperatureRecord));
 		return createdTemperatureRecord.save()
 	}
 }

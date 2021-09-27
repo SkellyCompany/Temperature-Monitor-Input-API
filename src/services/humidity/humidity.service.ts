@@ -12,9 +12,9 @@ export class HumidityService {
 		@InjectModel(HumidityRecord.name) private humidityRecordModel: Model<HumidityRecordDocument>
 	) { }
 
-	async insertRecord(humidityRecordDto: HumidityRecordDTO): Promise<HumidityRecord> {
+	insertRecord(humidityRecordDto: HumidityRecordDTO): Promise<HumidityRecord> {
 		const createdHumidityRecord = new this.humidityRecordModel(humidityRecordDto);
-		this.client.emit('humidity/newInsert', JSON.stringify(humidityRecordDto));
+		this.client.emit('humidity/newInsert', JSON.stringify(createdHumidityRecord));
 		return createdHumidityRecord.save()
 	}
 }
