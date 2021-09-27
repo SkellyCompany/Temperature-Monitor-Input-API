@@ -1,12 +1,12 @@
-import { HumidityService } from './services/humidity/humidity.service';
-import { TemperatureService } from './services/temperature/temperature.service';
-import { HumidityRecord, HumidityRecordSchema } from './schemas/humidity-record.schema';
-import { TemperatureRecord, TemperatureRecordSchema } from './schemas/temperature-record.schema';
+import { HumidityService } from './infrastructure/services/humidity.service';
+import { TemperatureService } from './infrastructure/services/temperature.service';
+import { HumidityRecord, HumidityRecordSchema } from './domain/schemas/humidity-record.schema';
+import { TemperatureRecord, TemperatureRecordSchema } from './domain/schemas/temperature-record.schema';
 import { Module } from '@nestjs/common';
-import { AppController } from './controllers/app.controller';
-import { AppService } from './services/app.service';
-import { TemperatureController } from './controllers/temperature/temperature.controller';
-import { HumidityController } from './controllers/humidity/humidity.controller';
+import { AppController } from './entry/http/app.controller';
+import { AppService } from './infrastructure/services/app.service';
+import { TemperatureController } from './entry/http/temperature.controller';
+import { HumidityController } from './entry/http/humidity.controller';
 import { MongooseModule } from '@nestjs/mongoose';
 import { ClientsModule, Transport } from '@nestjs/microservices';
 

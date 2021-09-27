@@ -1,5 +1,5 @@
-import { HumidityRecordDTO } from './../../dtos/humidity-record.dto';
-import { HumidityRecord, HumidityRecordDocument } from './../../schemas/humidity-record.schema';
+import { HumidityRecordDTO } from '../../domain/dtos/humidity-record.dto';
+import { HumidityRecord, HumidityRecordDocument } from '../../domain/schemas/humidity-record.schema';
 import { Inject, Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';

@@ -1,5 +1,5 @@
-import { TemperatureRecordDTO } from './../../dtos/temperature-record.dto';
-import { TemperatureRecord, TemperatureRecordDocument } from './../../schemas/temperature-record.schema';
+import { TemperatureRecordDTO } from '../../domain/dtos/temperature-record.dto';
+import { TemperatureRecord, TemperatureRecordDocument } from '../../domain/schemas/temperature-record.schema';
 import { Inject, Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';

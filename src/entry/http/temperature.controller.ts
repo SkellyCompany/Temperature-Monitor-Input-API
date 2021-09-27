@@ -1,5 +1,5 @@
-import { TemperatureRecordDTO } from './../../dtos/temperature-record.dto';
-import { TemperatureService } from './../../services/temperature/temperature.service';
+import { TemperatureRecordDTO } from '../../domain/dtos/temperature-record.dto';
+import { TemperatureService } from '../../infrastructure/services/temperature.service';
 import { Body, Controller, Post } from '@nestjs/common';
 
 @Controller('temperature')

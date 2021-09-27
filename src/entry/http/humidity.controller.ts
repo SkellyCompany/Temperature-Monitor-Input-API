@@ -1,5 +1,5 @@
-import { HumidityRecordDTO } from './../../dtos/humidity-record.dto';
-import { HumidityService } from './../../services/humidity/humidity.service';
+import { HumidityRecordDTO } from '../../domain/dtos/humidity-record.dto';
+import { HumidityService } from '../../infrastructure/services/humidity.service';
 import { Body, Controller, Post } from '@nestjs/common';
 
 @Controller('humidity')
